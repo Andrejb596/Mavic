@@ -1,0 +1,10 @@
+saas --watch  // в консоли
+
+npm install -g sass      // глобально установить
+
+sass --watch ./scss/style.scss ./css/style.css  // делаем чтоби изменения с 'sass' сразу же отображались в 'css' (sass --watch input.scss output.css)
+
+
+
+цикли в sass
+канвас
