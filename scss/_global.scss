@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -40,27 +40,50 @@ body {
     position: relative;
     color: #fff;
     min-width: 320px;
-    font-family: sans-serif;
-    // font-family: 'Ubuntu', sans-serif;
+    @extend %ubuntu-light;
+    font-size: 17px;
+    line-height: 26px;
 }
 
-.container{
+.container {
     max-width: 1270px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-.page__section {
-    min-height: 50vh;
+.page-section {
     background-image: url(../images/bg__page.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     position: relative;
-    padding: 74px 0 70px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
+        opacity: 0.15;
+    }
+
+    &__wrapper {
+        min-height: 100vh;
+        position: relative;
+        z-index: 1;
+        padding: 74px 0 70px;
+    }
 }
 
-.title {}
+.title {
+    @extend %ss-regular;
+    font-size: 44px;
+    line-height: 53px;
+    padding-left: 25px;
+    margin-bottom: 55px;
+    padding-top: 100px;
+}
 
 .scroll__btn {
     padding: 13px 0 40px;
