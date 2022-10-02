@@ -64,12 +64,35 @@
 }
 
 .menu {
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    display: none;
+  }
   &__list-item {
     display: inline-block;
-
+    
     &+.menu__list-item {
       padding-left: 20px;
     }
+    &.active a{
+      border-bottom: 1px solid #fff;
+    }
+  }
+  
+  &__list-link {
+    padding-bottom: 3px;
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  
+  // &__active {
+  //   border-bottom: 1px solid #fff;
+  // }
+  &__list-phone{
+    display: none;
   }
 }
 
@@ -180,7 +203,7 @@
   padding: 16px 26px;
   background-color: #fff;
   position: absolute;
-  bottom: -40px;
+  bottom: -43px;
   right: 0;
   cursor: pointer;
   z-index: 5;
@@ -590,6 +613,7 @@
   &__sosial-item {
     margin-bottom: 28px;
   }
+
   &__sosial-link {
     opacity: .5;
     transition: all .3s;
@@ -612,8 +636,10 @@
     line-height: 15px;
     opacity: .64;
   }
-  
+
 }
 
 
 @import "media";
+
+
